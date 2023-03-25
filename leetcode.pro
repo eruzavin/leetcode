@@ -9,3 +9,6 @@ SOURCES += \
     cpp/main.cpp
 
 include(cpp)
+
+DISTFILES += \
+    README.md
