@@ -1,5 +1,4 @@
 #include <vector>
-#include <iostream>
 #include <map>
 using namespace std;
 
@@ -30,9 +29,9 @@ public:
         return {0, 0};
     }
 
-    // Smarter approach with hash table. This is much faster.
-    // Time: O(n^2)
-    // Space: O(1)
+    // Smarter approach with a hash table. This is much faster.
+    // Time: O(n)
+    // Space: O(n)
     vector<int> twoSum_v2(vector<int>& nums, int target) {
         map<int, int> hashTable;
 
@@ -51,22 +50,30 @@ public:
 
 };
 
+
+/* main.cpp
+#include "./easy/1.two_sum.cpp"
+#include <vector>
+#include <iostream>
+using namespace std;
+
 int main()
 {
-    Solution s;
+   Solution s;
 
 //    vector<int> v = {-1,-2,-3,-4,-5};
 //    int t = -8;
 
-    vector<int> v = {2,7,11,15};
-    int t = 9;
+   vector<int> v = {2,7,11,15};
+   int t = 9;
 
-    for (auto n : s.twoSum_v2(v, t)) {
-        cout << n << " ";
-    }
+   for (auto n : s.twoSum_v2(v, t)) {
+       cout << n << " ";
+   }
 
-    cout << endl;
+   cout << endl;
 }
+*/
 
 /*
  https://leetcode.com/problems/two-sum/description/

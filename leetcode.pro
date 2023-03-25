@@ -4,6 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    cpp/easy/two_sum.cpp
+    cpp/easy/1.two_sum.cpp \
+    cpp/easy/9.palindrome_number.cpp \
+    cpp/main.cpp
 
 include(cpp)
