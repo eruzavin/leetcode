@@ -5,5 +5,5 @@ int main()
 {
     Solution s;
 
-    std::cout << s.romanToInt("MCMXCIV") << std::endl;
+    std::cout << s.romanToInt_v1("IV") << std::endl;
 }

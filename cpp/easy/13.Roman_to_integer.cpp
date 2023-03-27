@@ -1,9 +1,45 @@
 #include <string>
+#include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
-    int romanToInt(string s) {
+    /* Popular approach with map
+     * Cons: kinda elegant
+     * Pros: it is slower and more memory consuming than solution with 'case'
+     *
+     * Note: I changed the iteration algorithm to avoid using out of bounds indecies
+    */
+    int romanToInt_v1(string s) {
+        unordered_map <char,int> numsMap{
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        int result = numsMap[s.back()];
+
+        for(size_t i = 1; i < s.size(); ++i){
+            int prevNum = numsMap[s[i - 1]];
+            int currNum = numsMap[s[i]];
+
+            if (prevNum < currNum) {
+                result -= prevNum;
+            }
+            else {
+                result += prevNum;
+            }
+        }
+
+        return result;
+    }
+
+    // Simple and fast solution with `case` switch
+    int romanToInt_v2(string s) {
         int result = 0;
 
         for (size_t i = 0; i != s.size(); ++i) {
@@ -82,7 +118,7 @@ int main()
 {
     Solution s;
 
-    std::cout << s.romanToInt("MCMXCIV") << std::endl;
+    std::cout << s.romanToInt_v1("MCMXCIV") << std::endl;
 }
 */
 
