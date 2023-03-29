@@ -22,7 +22,6 @@ public:
         };
 
         int result = numsMap[s.back()];
-
         for(size_t i = 1; i < s.size(); ++i){
             int prevNum = numsMap[s[i - 1]];
             int currNum = numsMap[s[i]];
