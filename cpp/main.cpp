@@ -1,10 +1,10 @@
 #include <iostream>
-#include "./medium/3.longest_substr_without_repeating_chars.cpp"
+#include "./medium/5.longest_palindromic_substring.cpp"
+using namespace std;
 
 int main()
 {
     Solution s;
-
-//    std::cout << s.lengthOfLongestSubstring("pwwkew") << std::endl;
-    std::cout << s.lengthOfLongestSubstring("abcafhd") << std::endl;
+    cout << s.longestPalindrome("babad") << endl;
+//    s.longestPalindrome("babad");
 }
